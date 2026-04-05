@@ -17,7 +17,7 @@ function getRecipe() {
 
         // Add ingredients list:
         list = document.createElement("ul");
-        for (let i =0; i < json.ingredients.length(); i++) {
+        for (let i =0; i < json.ingredients.length; i++) {
             item = document.createElement("li");
             item.innerText = json.ingredients[i];
 
@@ -28,7 +28,7 @@ function getRecipe() {
 
         // Add steps:
         stepList = document.createElement("ol");
-        for (let i =0; i < json.steps.length(); i++) {
+        for (let i =0; i < json.steps.length; i++) {
             item = document.createElement("li");
             item.innerText = json.steps[i];
 

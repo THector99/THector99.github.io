@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>TimmieTheChef Recipe's</title>
-    <script type="text/javascript" src="recipes/test.json"></script>
+    <!-- <script type="text/javascript" src="recipes/test.json"></script> -->
     <script src="scripts/test.js"></script>
 </head>
 <body>
@@ -14,4 +14,13 @@
 <div id="recipeIngredients"></div>
 <div id="recipeSteps"></div>
 </body>
+
+<template id="ingredientItemTemplate">
+    <li class="ingredientItem" style="list-style-type: none; text-decoration: none;">
+        <input type="checkbox" class="ingredientCheckbox">
+        <span class="ingredientName"></span>
+    </li>
+</template>
+
+
 </html>

@@ -59,12 +59,19 @@ function getRecipe() {
             itemTemplateCLone = itemTemplate.content.cloneNode(true);
             itemTemplateCLone.querySelector(".ingredientItem").id = "ingredientItem" + i;
 
-            itemTemplateCLone.querySelector(".ingredientCheckbox").addEventListener("change", function() {
-                let ingredientSpan = document.getElementById("ingredientItem" + i);
-                if (this.checked) {
-                    ingredientSpan.style.textDecoration = "line-through";
+            itemTemplateCLone.querySelector(".ingredientItemDiv").addEventListener("click", function() {
+                console.log("Clicked ingredient " + i);
+                let checkbox = this.querySelector(".ingredientCheckbox");
+
+                if (!checkbox.checked) {
+                    this.style.textDecoration = "line-through";
+                    console.log("Checked ingredient " + i);
+                    checkbox.checked = true;
+                    
                 } else {
-                    ingredientSpan.style.textDecoration = "none";
+                    this.style.textDecoration = "none";
+                    console.log("Unchecked ingredient " + i);
+                    checkbox.checked = false;
                 }
             });
 

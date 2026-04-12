@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TimmieTheChef Recipe's</title>
+    <!-- <script type="text/javascript" src="recipes/test.json"></script> -->
+    <script src="scripts/recipe.js"></script>
+</head>
+
+<body>
+    <h1>Titel</h1>
+    <p>This site functions as a recipe archive for me :D</p>
+    <h2 id="recipeHeader"></h2>
+    <div id="recipeIngredients"></div>
+    <div id="recipeSteps"></div>
+</body>
+
+<template id="ingredientItemTemplate">
+    <div class="ingredientItemDiv"
+        style="background-color: blueviolet; padding: 10px; margin-bottom: 10px; border: 0.5px solid black; margin-bottom: 2px; z-index: 1;">
+        <li class="ingredientItem" style="list-style-type: none;">
+            <input type="checkbox" class="ingredientCheckbox">
+            <span class="ingredientName"></span>
+        </li>
+    </div>
+</template>
+
+</html>

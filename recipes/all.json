@@ -4,6 +4,11 @@
             "name" : "Chicken Piri Piri",
             "tags" : ["Oven", "Spicy", "Portuguese"],
             "url" : "piri"
+        },
+        {
+            "name" : "Zuurkool",
+            "tags" : ["Quick", "floral", "Dutch"],
+            "url" : "zuurkool"
         }
     ]
 }

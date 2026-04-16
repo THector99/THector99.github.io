@@ -1,20 +1,34 @@
 {
-  "name" : "Chicken Piri Piri",
-  "tags" : ["Oven", "Spicy", "Portuguese"],
-  "ingredients" : [
-    "1.5 tl gerookte paprika",
-    "2 el suiker",
-    "1 - 2 tl chili vlokken",
-    "1 el oregano (dry)",
-    "1 tl zout???",
-    "3 - 4 el olijfolie",
-    "1 limoen zest & sap",
-    "2 knoflook teentjes (geperst)",
-    "300 - 400 gram kipdijen (zonder bot)",
-    "paar tomaten (heel) te groote van een pingpongbal"
+  "name": "Chicken Piri Piri",
+  "tags": [
+    "Oven",
+    "Spicy",
+    "Portuguese"
+  ],
+  "ingredients": [
+    {
+      "header": "Marinade",
+      "items": [
+        "1.5 tl gerookte paprika",
+        "2 el suiker",
+        "1 - 2 tl chili vlokken",
+        "1 el oregano (dry)",
+        "1 tl zout???",
+        "3 - 4 el olijfolie",
+        "1 limoen zest & sap",
+        "2 knoflook teentjes (geperst)"
+      ]
+    },
+    {
+      "header": "Groente & vlees",
+      "items": [
+        "300 - 400 gram kipdijen (zonder bot)",
+        "paar tomaten (heel) te groote van een pingpongbal"
+      ]
+    }
   ],
   "steps": [
-    "Mix de marinade tot een gladde saus voeg eventuuel eztra olijfolie toe als het te droog is",
+    "Mix de marinade tot een gladde saus voeg eventueel extra olijfolie toe als het te droog is",
     "Doe de kip en tomaten insmeren met deze marinade en laat eventueel een paar uur marineren in de koelkast",
     "Doe alles in een ovenschaal en zet 40 - 60 minuten in de oven op 200 graden Celcius (boven/onder + hete lucht)",
     "Serveer eventueel met flatbread, rijst of friet"

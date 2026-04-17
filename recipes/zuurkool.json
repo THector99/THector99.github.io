@@ -9,11 +9,11 @@
     {
       "header": "",
       "items": [
-        "1 el stroop",
-        "1 el balsamico azijn",
-        "1.5tl rose peper korrels (gemalen)",
-        "Zuurkool (met kruiden)",
-        "1 appel (in stukjes)"
+        {"quantity": 1, "unit": "el", "name": "stroop"},
+        {"quantity": 1, "unit": "el", "name": "balsamico azijn"},
+        {"quantity": 1.5, "unit": "tl", "name": "rose peper korrels (gemalen)"},
+        {"quantity": null, "unit": null, "name": "Zuurkool (met kruiden)"},
+        {"quantity": 1, "unit": null, "name": "appel (in stukjes)"}
       ]
     }
   ],

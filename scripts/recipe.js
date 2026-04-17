@@ -83,7 +83,9 @@ function getRecipe() {
                         }
                     });
 
-                    itemTemplateCLone.querySelector(".ingredientName").innerText = category.items[i];
+                    itemTemplateCLone.querySelector(".ingredientQuantity").innerText = category.items[i].quantity ? category.items[i].quantity + " " : "";
+                    itemTemplateCLone.querySelector(".ingredientUnit").innerText = category.items[i].unit ? category.items[i].unit + " " : "";
+                    itemTemplateCLone.querySelector(".ingredientName").innerText = category.items[i].name ? category.items[i].name : "";
 
                     list.append(itemTemplateCLone);
                 }

@@ -9,3 +9,6 @@ asdasd
 - [ ] Add an retarted unit calculater (cups to grams etc).
 - [ ] Add amount of persons to recipe
 - [ ] Add multiplier to recipes
+- [ ] Add collapsable ingredient headers
+- [ ] Add a linkto recipe, so you can for instance easily include a marinade, either include a link to it or the whole recipe gets included.
+- [ ] ADD GYM SCHEME TO CUSTOM /GYM URL;

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TimmieTheChef Recipe's</title>
+    <!-- <script type="text/javascript" src="recipes/test.json"></script> -->
+    <script src="scripts/creator.js"></script>
+</head>
+
+<body>
+    <h1>Create your own recipe</h1>
+
+    <input type="text" id="name" placeholder="Recipe name...">
+    <div id="tags">
+        <input type="text" placeholder="new tag...">
+    </div>
+    <button id="addTagButton" onclick="addTag(this)">Add Tag</button>
+    <div id="ingredientList">
+    </div>
+    <button id="addIngredientButton" onclick="addIngredient()">Add Ingredient</button>
+
+    <!-- <input type="text" id="name" placeholder="Recipe name..."> -->
+
+    <div>
+        <ol id="stepList">
+
+        </ol>
+    </div>
+    <button onclick="addStep()">Add step</button>
+
+</body>
+
+<template id="tagRow">
+    <div>
+        <input type="text" class="tagName" placeholder="new tag...">
+        <button class="removeTag" onclick="this.parentElement.remove()">Remove Tag</button>
+    </div>
+</template>
+
+<template id="recipeListItemTemplate">
+    <div>
+        <input class="isHeader" type="checkbox">
+        <input class="ingredientAmount">
+        <select class="ingredientUnit">
+            <option value="gram">gram</option>
+            <option value="ml">ml</option>
+            <option value="el">el</option>
+            <option value="tl">tl</option>
+        </select>
+        <input class="ingredientName">
+        <button class="removeIngredient" onclick="this.parentElement.remove()">Remove Ingredient</button>
+    </div>
+</template>
+
+<template id="recipeStepTemplate">
+    <li class="stepItem">
+        <div style="display: flex; flex-direction: row; gap: 5px;">
+            <textarea class="recipeStep" style="width: 500px; height: 100px;"></textarea>
+            <div style="display: flex; flex-direction: column; gap: 3px;">
+                <button style="width: 50px; height: 50px;" class="moveUp" onclick="moveStep(this.parentElement.parentElement.parentElement, -1)">
+                    ↑
+                </button>
+                <button style="width: 50px; height: 50px;" class="moveDown" onclick="moveStep(this.parentElement.parentElement.parentElement, 1)">
+                    ↓
+                </button>
+            </div>
+            <button style="width: 50px;" class="deleteStepButton" onclick="deleteStep(this.parentElement.parentElement)">X</button>
+        </div>
+    </li>
+</template>
+
+</html>

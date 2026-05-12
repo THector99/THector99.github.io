@@ -97,3 +97,68 @@ function deleteStep(element) {
         elementList[i].id = stepItemID + i.toString();
     }
 }
+
+function createIngredientHeader(element) {
+    element.parentElement.querySelector(".ingredientAmount").style.visibility = "visible";
+    element.parentElement.querySelector(".ingredientUnit").style.visibility = "visible";
+
+    if (element.checked) {
+        element.parentElement.querySelector(".ingredientAmount").style.visibility = "hidden";
+        element.parentElement.querySelector(".ingredientUnit").style.visibility = "hidden";
+    }
+}
+
+function saveRecipe() {
+    let recipe = {
+        "name": document.getElementById("name").value,
+        "tags": [...tagList.children].map(child => child.querySelector(".tagName").value),
+        "ingredients": [],
+        "steps": [...stepListElement.children].map(child => child.querySelector(".recipeStep").value)
+    };
+
+    let ingredientSection = {
+        "header": "",
+        "items": []
+    }
+    for (child of ingredientList.children) {
+        if (child.querySelector(".isHeader").checked) {
+            if (recipe.ingredients.length != 0) {
+                recipe.ingredients.push(ingredientList);
+                ingredientSection.items = [];
+            }
+            ingredientSection.header = child.querySelector(".ingredientName").value;
+            console.log(child.querySelector(".ingredientName").value);
+
+            continue;
+        }
+
+        ingredientSection.items.push({
+            "quantity": child.querySelector(".ingredientAmount").value,
+            "unit": child.querySelector(".ingredientUnit").value,
+            "name": child.querySelector(".ingredientName").value,
+        });
+    }
+
+    recipe.ingredients.push(ingredientSection);
+
+    const jsonString = JSON.stringify(recipe, null, 2);
+
+    // Create blob
+    const blob = new Blob([jsonString], {
+        type: "application/json"
+    });
+
+    // Create temporary download URL
+    const url = URL.createObjectURL(blob);
+
+    // Create temporary link
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "RecipeTest.json";
+
+    // Trigger download
+    a.click();
+
+    // Cleanup
+    URL.revokeObjectURL(url);
+}

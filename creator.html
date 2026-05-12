@@ -13,7 +13,7 @@
 
     <input type="text" id="name" placeholder="Recipe name...">
     <div id="tags">
-        <input type="text" placeholder="new tag...">
+        <div><input type="text" class="tagName" placeholder="new tag..."></div>
     </div>
     <button id="addTagButton" onclick="addTag(this)">Add Tag</button>
     <div id="ingredientList">
@@ -40,7 +40,7 @@
 
 <template id="recipeListItemTemplate">
     <div>
-        <input class="isHeader" type="checkbox">
+        <input class="isHeader" type="checkbox" onclick="createIngredientHeader(this)">
         <input class="ingredientAmount">
         <select class="ingredientUnit">
             <option value="gram">gram</option>

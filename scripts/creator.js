@@ -109,8 +109,9 @@ function createIngredientHeader(element) {
 }
 
 function saveRecipe() {
+
     let recipe = {
-        "name": document.getElementById("name").value,
+        "name": document.getElementById("name").value !== '' ? document.getElementById("name").value : "recipe",
         "tags": [...tagList.children].map(child => child.querySelector(".tagName").value),
         "ingredients": [],
         "steps": [...stepListElement.children].map(child => child.querySelector(".recipeStep").value)
@@ -154,7 +155,7 @@ function saveRecipe() {
     // Create temporary link
     const a = document.createElement("a");
     a.href = url;
-    a.download = "RecipeTest.json";
+    a.download = recipe.name;
 
     // Trigger download
     a.click();

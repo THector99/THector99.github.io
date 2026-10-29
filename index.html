@@ -4,11 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <title>TimmieTheChef Recipe's</title>
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
     <!-- <script type="text/javascript" src="recipes/test.json"></script> -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
     <script src="scripts/home.js"></script>
 </head>
 
 <body>
+    <!-- NAVBAR -->
+    <div class="navBar">
+        <div id="navBarLogo">
+            <div style="width: 60px; height: 60px; background-color: #8E7DBD; border-radius: 100%;"></div>
+            <div id="navBarLogoText">
+                <span id="navBarLogoHeader">Timmie</span>
+                <span id="navBarLogoSub">the chef</span>
+            </div>
+        </div>
+        <div id="navBarAllRecipes">
+            All recipes
+        </div>
+        <div id="navBarSearchBtn">
+
+        </div>
+    </div>
+
+
+    <!-- SEARCH BAR -->
+    <div class="search_bar_background">
+        <h1>Search Recipes</h1>
+        <div class="search_bar">
+            <input class="search_bar_bar" type="text">
+            <div class="search_bar_btn"></div>
+        </div>
+    </div>
+
+
+
+
+    <!-- TODO: Categories -->
+
+
+
+
+    <!-- TODO: FAV RECIPES -->
+
+
+    <!-- OLD RECIPES LIST -->
+    <div id="recipesList">
+
+    </div>
+
     <h1>All Recipe's</h1>
     <p>This site functions as a recipe archive for me :D</p>
 
@@ -17,15 +63,44 @@
         <!-- <button id="searchButton">Search</button> -->
     </div>
 
-    <div id="recipesList"></div>
-
 </body>
 
-    <template id="recipeListItemTemplate">
-        <div class="recipeItem" style="background-color: #a17afa; padding: 10px; margin-bottom: 10px;">
-            <h2 class="recipeTitle"></h2>
-            <p class="recipeDescription"></p>
+<!-- <template id="recipeListItemTemplate">
+    <div class="recipeItem" style="background-color: #a17afa; padding: 10px; margin-bottom: 10px;">
+        <h2 class="recipeTitle"></h2>
+        <p class="recipeDescription"></p>
+    </div>
+</template> -->
+
+<template id="recipeCardTemplate">
+    <div class="recipe_card">
+        <div class="recipe_card_styling">
+            <div class="recipe_card_header">
+                <div class="recipe_card_header_symbol">
+
+                </div>
+                <div class="recipe_card_header_title recipeTitle"></div>
+            </div>
+
+            <div class="recipe_card_info">
+                <div class="recipe_card_info_template">
+                    <img class="recipe_card_info_template_img" src="img/Clock.png" alt="Clock">
+                    <div class="recipe_card_info_template_txt recipeTime">30 min</div>
+                </div>
+
+                <div class="recipe_card_info_template">
+                    <img class="recipe_card_info_template_img" src="img/Difficulty.png" alt="Difficulty">
+                    <div class="recipe_card_info_template_txt recipeSkillLevel">easy</div>
+                </div>
+            </div>
+
+            <div class="recipe_card_description recipeDescription"></div>
         </div>
-    </template>
+        <div class="recipe_card_button">
+            <span>View Recipe</span>
+        </div>
+
+    </div>
+</template>
 
 </html>

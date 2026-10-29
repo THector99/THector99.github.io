@@ -60,12 +60,12 @@ function getRecipes() {
 }
 
 function createRecipeListItem(recipe) {
-    recipeListItemTemplateClone = document.getElementById("recipeListItemTemplate").content.cloneNode(true);
-    recipeListItemTemplateClone.querySelector(".recipeItem").addEventListener("click", function () {
+    recipeListItemTemplateClone = document.getElementById("recipeCardTemplate").content.cloneNode(true);
+    recipeListItemTemplateClone.querySelector(".recipe_card").addEventListener("click", function () {
         window.location.href = "recipe.html?recipe=" + recipe.url;
     });
 
     recipeListItemTemplateClone.querySelector(".recipeTitle").innerText = recipe.name;
-    recipeListItemTemplateClone.querySelector(".recipeDescription").innerText = "Test Description";
+    recipeListItemTemplateClone.querySelector(".recipeDescription").innerText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's";
     recipeList.appendChild(recipeListItemTemplateClone);
 }
